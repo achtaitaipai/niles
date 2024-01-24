@@ -1,6 +1,6 @@
 {
   "name": "@achtaitaipai/niles",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "type": "module",
   "main": "dist/index.js",
@@ -12,7 +12,10 @@
   "devDependencies": {
     "@tweakpane/core": "^2.0.3",
     "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "query-string": "^8.1.0",
+    "tweakpane": "^4.0.3",
+    "zod": "^3.22.4"
   },
   "scripts": {
     "dev": "tsup --watch",
@@ -27,10 +30,5 @@
   "bugs": {
     "url": "https://github.com/achtaitaipai/niles/issues"
   },
-  "homepage": "https://github.com/achtaitaipai/niles#readme",
-  "dependencies": {
-    "query-string": "^8.1.0",
-    "tweakpane": "^4.0.3",
-    "zod": "^3.22.4"
-  }
+  "homepage": "https://github.com/achtaitaipai/niles#readme"
 }
