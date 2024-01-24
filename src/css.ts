@@ -23,3 +23,12 @@ export const copyCss = (dictionary: Record<string, string>) => {
   }
   copyToClipBoard(css);
 };
+
+export const getCssVariableName = (...chunks: string[]) => {
+  let name = "-";
+  for (let index = 0; index < chunks.length; index++) {
+    const element = chunks[index];
+    if (element !== "") name += "-" + element;
+  }
+  return name;
+};

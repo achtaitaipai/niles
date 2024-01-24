@@ -1,5 +1,6 @@
 import { TabPageApi } from "tweakpane";
 import { Params } from "../../params.js";
+import { getCssVariableName } from "../../css.js";
 
 export const addFontsControls = (
   page: TabPageApi | undefined,
@@ -21,7 +22,8 @@ export const getFontsVariables = (params: Params) => {
   for (let index = 0; index < params.fontsKeys.length; index++) {
     const key = params.fontsKeys[index];
     const value = params.fontsValues[index];
-    if (key && value) fonts[`--${params.fontCssPrefix}-${key}`] = value;
+    if (key && value)
+      fonts[getCssVariableName(params.fontCssPrefix, key)] = value;
   }
   return fonts;
 };

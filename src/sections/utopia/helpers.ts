@@ -1,3 +1,5 @@
+import { getCssVariableName } from "../../css.js";
+
 export const spaceLabel = (index: number) => {
   if (index === 1) return "m";
   if (index === 2) return "l";
@@ -61,7 +63,7 @@ export const buildTypeSizes = (
     const minSize = minFontSize * minTypeScale ** i;
     const maxSize = maxFontSize * maxTypeScale ** i;
     const value = buildClamp(minWidth, maxWidth, minSize, maxSize);
-    variables[`--${cssPrefix}-${i}`] = value;
+    variables[getCssVariableName(cssPrefix, i.toString())] = value;
   }
   return variables;
 };
@@ -82,7 +84,7 @@ export const buildSpaces = (
     const minSize = minFontSize * multiplier!;
     const maxSize = maxFontSize * multiplier!;
     const value = buildClamp(minWidth, maxWidth, minSize, maxSize);
-    variables[`--${cssPrefix}-${label}`] = value;
+    variables[getCssVariableName(cssPrefix, label)] = value;
   }
   for (let index = 0; index < positiveSpaceSteps.length; index++) {
     const label = spaceLabel(index);
@@ -90,7 +92,7 @@ export const buildSpaces = (
     const minSize = minFontSize * multiplier!;
     const maxSize = maxFontSize * multiplier!;
     const value = buildClamp(minWidth, maxWidth, minSize, maxSize);
-    variables[`--${cssPrefix}-${label}`] = value;
+    variables[getCssVariableName(cssPrefix, label)] = value;
   }
   return variables;
 };
