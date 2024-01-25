@@ -10,7 +10,7 @@ import { z } from 'zod'
 export type FontParams = {
 	/**Fonts names */
 	fontsKeys: string[]
-	/**Fonts index values */
+	/**Fonts values */
 	fontsValues: string[]
 	/**Fonts options */
 	fontsOptions: Record<string, string>
