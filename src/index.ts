@@ -5,7 +5,7 @@ import type { ColorParams, FontParams, UtopiaParams } from './sections/index.js'
 
 type Params = FontParams & ColorParams & UtopiaParams
 
-export const start = (options: Partial<Params>) => {
+export const start = (options: Partial<Params> = {}) => {
 	const sections = [utopiaSection, colorSection, fontSection]
 
 	//Apply defaults params
@@ -46,7 +46,7 @@ export const start = (options: Partial<Params>) => {
 				string[]
 			>((prev, section) => (section.getUrl ? [...prev, section.getUrl(params)] : prev), [])
 			.join('&')
-	const updateUrl = () => history.pushState(null, '', getUrl())
+	const updateUrl = () => history.pushState(null, '', '?' + getUrl())
 
 	const update = () => {
 		updateCss()
