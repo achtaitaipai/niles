@@ -1,6 +1,7 @@
-import { Params } from "../../params.js";
 import { buildSpaces, buildTypeSizes } from "./helpers.js";
-export const getUtopiaVariables = (params: Params) => {
+import { UtopiaParams } from "./index.js";
+
+export const getUtopiaVariables = (params: UtopiaParams) => {
   const types = buildTypeSizes(
     params.minWidth,
     params.maxWidth,

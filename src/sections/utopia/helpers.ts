@@ -1,4 +1,4 @@
-import { getCssVariableName } from "../../css.js";
+import { getCssVariableName } from "../../lib";
 
 export const spaceLabel = (index: number) => {
   if (index === 1) return "m";

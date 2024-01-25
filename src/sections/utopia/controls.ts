@@ -1,15 +1,10 @@
 import { TabPageApi } from "tweakpane";
-import { Params } from "../../params.js";
-import {
-  buildSpaces,
-  buildTypeSizes,
-  spaceLabel,
-  typeScalesOptions,
-} from "./helpers.js";
+import { spaceLabel, typeScalesOptions } from "./helpers.js";
+import { UtopiaParams } from "./index.js";
 
 export const addUtopiaControls = (
-  page: TabPageApi | undefined,
-  params: Params
+  params: UtopiaParams,
+  page: TabPageApi | undefined
 ) => {
   if (!page) return;
 

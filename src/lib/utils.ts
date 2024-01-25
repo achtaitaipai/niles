@@ -1,5 +1,3 @@
-import { copyToClipBoard } from "./utils.js";
-
 export const updateCssProperties = (
   dictionary: Record<string, string>,
   element?: HTMLElement
@@ -13,7 +11,7 @@ export const updateCssProperties = (
   }
 };
 
-export const copyCss = (dictionary: Record<string, string>) => {
+export const getCss = (dictionary: Record<string, string>) => {
   let css = "";
   for (const key in dictionary) {
     if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
@@ -21,7 +19,7 @@ export const copyCss = (dictionary: Record<string, string>) => {
       if (value) css += `\t${key}: ${value};\n`;
     }
   }
-  copyToClipBoard(css);
+  return css;
 };
 
 export const getCssVariableName = (...chunks: string[]) => {
@@ -31,4 +29,13 @@ export const getCssVariableName = (...chunks: string[]) => {
     if (element !== "") name += "-" + element;
   }
   return name;
+};
+
+export const copyToClipBoard = async (text: string) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log("Content copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
 };
