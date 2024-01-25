@@ -1,35 +1,37 @@
 {
-  "name": "@achtaitaipai/niles",
-  "version": "0.0.8",
-  "description": "",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
-  ],
-  "devDependencies": {
-    "@tweakpane/core": "^2.0.3",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3",
-    "query-string": "^8.1.0",
-    "tweakpane": "^4.0.3",
-    "zod": "^3.22.4"
-  },
-  "scripts": {
-    "dev": "tsup --watch",
-    "lint": "tsc",
-    "build": "tsup"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/achtaitaipai/niles.git"
-  },
-  "author": "achtaitaipai",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/achtaitaipai/niles/issues"
-  },
-  "homepage": "https://github.com/achtaitaipai/niles#readme"
+	"name": "@achtaitaipai/niles",
+	"version": "0.0.8",
+	"description": "",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/index.js",
+		"dist/index.d.ts"
+	],
+	"devDependencies": {
+		"@tweakpane/core": "^2.0.3",
+		"prettier": "^3.2.4",
+		"query-string": "^8.1.0",
+		"tsup": "^8.0.1",
+		"tweakpane": "^4.0.3",
+		"typescript": "^5.3.3",
+		"zod": "^3.22.4"
+	},
+	"scripts": {
+		"dev": "tsup --watch",
+		"lint": "tsc",
+		"format": "prettier . --write",
+		"build": "tsup"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/achtaitaipai/niles.git"
+	},
+	"author": "achtaitaipai",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/achtaitaipai/niles/issues"
+	},
+	"homepage": "https://github.com/achtaitaipai/niles#readme"
 }

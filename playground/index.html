@@ -1,97 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			:root {
+				--clr-surface: #ffffff;
+				--clr-text: #000000;
+				--clr-primary: #ee00fb;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root {
-            --clr-surface: #ffffff;
-            --clr-text: #000000;
-            --clr-primary: #ee00fb;
+				--font-base: 'system-ui', 'sans-serif';
+				--font-display: 'system-ui', 'sans-serif';
 
-            --font-base: 'system-ui', 'sans-serif';
-            --font-display: 'system-ui', 'sans-serif';
+				--step--2: clamp(0.78125rem, 0.774728rem + 0.032609vw, 0.8rem);
+				--step--1: clamp(0.9375rem, 0.915761rem + 0.108696vw, 1rem);
+				--step-0: clamp(1.125rem, 1.081522rem + 0.217391vw, 1.25rem);
+				--step-1: clamp(1.35rem, 1.276087rem + 0.369565vw, 1.5625rem);
+				--step-2: clamp(1.62rem, 1.50413rem + 0.579348vw, 1.953125rem);
+				--step-3: clamp(1.944rem, 1.770989rem + 0.865054vw, 2.441406rem);
+				--step-4: clamp(2.3328rem, 2.082728rem + 1.250362vw, 3.051758rem);
+				--step-5: clamp(2.79936rem, 2.446199rem + 1.765803vw, 3.814697rem);
+				--space-3xs: clamp(0.28125rem, 0.27038rem + 0.054348vw, 0.3125rem);
+				--space-2xs: clamp(0.5625rem, 0.540761rem + 0.108696vw, 0.625rem);
+				--space-xs: clamp(0.84375rem, 0.811141rem + 0.163043vw, 0.9375rem);
+				--space-s: clamp(1.125rem, 1.081522rem + 0.217391vw, 1.25rem);
+				--space-m: clamp(1.6875rem, 1.622283rem + 0.326087vw, 1.875rem);
+				--space-l: clamp(2.25rem, 2.163043rem + 0.434783vw, 2.5rem);
+				--space-xl: clamp(3.375rem, 3.244565rem + 0.652174vw, 3.75rem);
+				--space-2xl: clamp(4.5rem, 4.326087rem + 0.869565vw, 5rem);
+				--space-3xl: clamp(6.75rem, 6.48913rem + 1.304348vw, 7.5rem);
+			}
 
-            --step--2: clamp(0.78125rem, 0.774728rem + 0.032609vw, 0.8rem);
-            --step--1: clamp(0.9375rem, 0.915761rem + 0.108696vw, 1rem);
-            --step-0: clamp(1.125rem, 1.081522rem + 0.217391vw, 1.25rem);
-            --step-1: clamp(1.35rem, 1.276087rem + 0.369565vw, 1.5625rem);
-            --step-2: clamp(1.62rem, 1.50413rem + 0.579348vw, 1.953125rem);
-            --step-3: clamp(1.944rem, 1.770989rem + 0.865054vw, 2.441406rem);
-            --step-4: clamp(2.3328rem, 2.082728rem + 1.250362vw, 3.051758rem);
-            --step-5: clamp(2.79936rem, 2.446199rem + 1.765803vw, 3.814697rem);
-            --space-3xs: clamp(0.28125rem, 0.27038rem + 0.054348vw, 0.3125rem);
-            --space-2xs: clamp(0.5625rem, 0.540761rem + 0.108696vw, 0.625rem);
-            --space-xs: clamp(0.84375rem, 0.811141rem + 0.163043vw, 0.9375rem);
-            --space-s: clamp(1.125rem, 1.081522rem + 0.217391vw, 1.25rem);
-            --space-m: clamp(1.6875rem, 1.622283rem + 0.326087vw, 1.875rem);
-            --space-l: clamp(2.25rem, 2.163043rem + 0.434783vw, 2.5rem);
-            --space-xl: clamp(3.375rem, 3.244565rem + 0.652174vw, 3.75rem);
-            --space-2xl: clamp(4.5rem, 4.326087rem + 0.869565vw, 5rem);
-            --space-3xl: clamp(6.75rem, 6.48913rem + 1.304348vw, 7.5rem);
+			body {
+				color: var(--clr-text);
+				background: var(--clr-surface);
+				font-size: var(--step-0);
+				font-family: var(--font-base);
+				line-height: 1.5;
+			}
 
-        }
+			article {
+				max-width: 66ch;
+				margin-inline: auto;
+			}
 
-        body {
-            color: var(--clr-text);
-            background: var(--clr-surface);
-            font-size: var(--step-0);
-            font-family: var(--font-base);
-            line-height: 1.5;
-        }
+			h1,
+			h2,
+			h3,
+			h4,
+			h5 {
+				line-height: 1.2;
+				font-family: var(--font-display);
+			}
 
-        article {
-            max-width: 66ch;
-            margin-inline: auto;
-        }
+			h1 {
+				font-size: var(--step-5);
+			}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            line-height: 1.2;
-            font-family: var(--font-display);
-        }
+			h2 {
+				font-size: var(--step-4);
+			}
 
-        h1 {
-            font-size: var(--step-5);
-        }
+			h3 {
+				font-size: var(--step-3);
+			}
 
-        h2 {
-            font-size: var(--step-4);
-        }
+			h4 {
+				font-size: var(--step-2);
+			}
 
-        h3 {
-            font-size: var(--step-3);
-        }
+			h5 {
+				font-size: var(--step-1);
+			}
 
-        h4 {
-            font-size: var(--step-2);
-        }
+			a {
+				color: var(--clr-primary);
+			}
+		</style>
+	</head>
 
-        h5 {
-            font-size: var(--step-1);
-        }
+	<body>
+		<article>
+			<h1>Hello</h1>
 
-        a {
-            color: var(--clr-primary);
-        }
-    </style>
-</head>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ducimus
+				voluptatibus, facere incidunt tenetur vero neque nihil magnam temporibus
+				ad nisi tempora ut fuga at similique dolorum obcaecati, iusto saepe.
+			</p>
+		</article>
 
-<body>
-    <article>
-        <h1>Hello</h1>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ducimus voluptatibus, facere incidunt tenetur
-            vero
-            neque nihil magnam temporibus ad nisi tempora ut fuga at similique dolorum obcaecati, iusto saepe.</p>
-    </article>
-
-    <script type="module" src="./index.js"></script>
-</body>
-
+		<script type="module" src="./index.js"></script>
+	</body>
 </html>
