@@ -1,37 +1,37 @@
+import { z } from 'zod'
 import { Section } from '../'
 import { addParamsToUrl, parseUrl } from '../../lib'
 import { addUtopiaControls } from './controls.js'
 import { getUtopiaVariables } from './getVariables.js'
-import { z } from 'zod'
 
 export type UtopiaParams = {
-	/**Minimum viewport width in px */
+	/**Minimum viewport width in px @default 320 */
 	minWidth: number
-	/**Maximum viewport width in px */
+	/**Maximum viewport width in px @default 1240*/
 	maxWidth: number
-	/**Base font size for minimum viewport in px */
+	/**Base font size for minimum viewport in px @default 18*/
 	minFontSize: number
-	/**Base font size for maximum viewport in px */
+	/**Base font size for maximum viewport in px @default 20*/
 	maxFontSize: number
-	/**Scale between fontsizes for minimum viewport */
+	/**Scale between fontsizes for minimum viewport @default 1.2*/
 	minTypeScale: number
-	/**Scale between fontsizes for maximum viewport */
+	/**Scale between fontsizes for maximum viewport @default 1.25*/
 	maxTypeScale: number
-	/**Number of negatives types steps  */
+	/**Number of negatives types steps @default 2*/
 	negativeTypeSteps: number
-	/**Number of positives types steps  */
+	/**Number of positives types steps @default 5*/
 	positiveTypeSteps: number
-	/**Multipliers < 0 for spaces */
+	/**Multipliers < 0 for spaces @default [0.75,0.5,0.25]*/
 	negativeSpaceSteps: number[]
-	/**Multipliers >= 0 for spaces */
+	/**Multipliers >= 0 for spaces @default [1,1.5,2,3,4,6]*/
 	positiveSpaceSteps: number[]
-	/** Css prefix for types variables */
+	/** Css prefix for types variables @default 'step'*/
 	typeCssPrefix: string
-	/** Css prefix for spaces variables */
+	/** Css prefix for spaces variables @default 'space'*/
 	spaceCssPrefix: string
 }
 
-const defaultUtopiaParams = {
+const defaultUtopiaParams: UtopiaParams = {
 	minWidth: 320,
 	maxWidth: 1240,
 	minFontSize: 18,

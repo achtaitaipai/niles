@@ -3,18 +3,18 @@ import { Section } from '../'
 import { z } from 'zod'
 
 export type ColorParams = {
-	/**Colors names */
+	/**Colors names @default ['surface','shade','text']*/
 	colorsKeys: string[]
-	/**Colors values in hexFormat */
+	/**Colors values in hexFormat @default ['#f1f3f5','#868e96','#343a40']*/
 	colorsValues: string[]
-	/** Css prefix for colors variables */
+	/** Css prefix for colors variables @default 'clr'*/
 	colorCssPrefix: string
 }
 
 const defaultColorsParams = {
 	colorCssPrefix: 'clr',
-	colorsKeys: [],
-	colorsValues: [],
+	colorsKeys: ['surface', 'shade', 'text'],
+	colorsValues: ['#f1f3f5', '#868e96', '#343a40'],
 }
 
 const urlSchema = z.object({

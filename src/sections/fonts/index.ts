@@ -8,20 +8,20 @@ import { Section } from '../'
 import { z } from 'zod'
 
 export type FontParams = {
-	/**Fonts names */
+	/**Fonts names @default ['base','display'] */
 	fontsKeys: string[]
-	/**Fonts values */
+	/**Fonts values @default [modernFontStack.systemui,modernFontStack.antique] */
 	fontsValues: string[]
-	/**Fonts options */
+	/**Fonts options @default modernFontStack */
 	fontsOptions: Record<string, string>
-	/** Css prefix for fonts variables */
+	/**Css prefix for fonts variables @default "font" */
 	fontCssPrefix: string
 }
 
-const defaultFontParams = {
+const defaultFontParams: FontParams = {
 	fontCssPrefix: 'font',
-	fontsKeys: [],
-	fontsValues: [],
+	fontsKeys: ['base', 'display'],
+	fontsValues: [modernFontStack.systemui, modernFontStack.antique],
 	fontsOptions: modernFontStack,
 }
 

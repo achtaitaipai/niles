@@ -22,7 +22,7 @@ export const typeScalesOptions = {
 	'major sixth (1.778)': 1.778,
 	'minor seventh (1.875)': 1.875,
 	'octave (2)': 2,
-}
+} as const
 
 const round = (n: number, d = 6) => Math.round(n * 10 ** d) / 10 ** d
 
