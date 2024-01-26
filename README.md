@@ -27,9 +27,9 @@ start()
 **With a CDN**
 
 ```html
-<script type="module">
-	const { start } = import('https://cdn.jsdelivr.net/npm/@achtaitaipai/niles')
-	start()
+<script src="https://unpkg.com/@achtaitaipai/niles"></script>
+<script>
+	niles.start()
 </script>
 ```
 
