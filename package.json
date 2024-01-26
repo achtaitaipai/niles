@@ -3,15 +3,13 @@
 	"version": "0.0.15",
 	"description": "",
 	"type": "module",
-	"main": "dist/index.global.js",
-	"module": "dist/index.js",
+	"main": "dist/index.js",
+	"browser": "dist/index.global.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist/index.js",
-		"dist/index.js.map",
 		"dist/index.d.ts",
-		"dist/index.global.js",
-		"dist/index.global.js.map"
+		"dist/index.global.js"
 	],
 	"devDependencies": {
 		"@tweakpane/core": "^2.0.3",
